@@ -1,0 +1,138 @@
+:root {
+    --pane-padding: 5px 42px;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    /* padding: var(--pane-padding); */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 900px;
+    /* background: red; */
+}
+
+h1 {
+    font-weight: 900 !important;
+}
+
+.grid_block {
+    display: grid;
+    /* y */
+    row-gap: .5rem;
+}
+
+.grid_search_input {
+    display: grid;
+    grid-template-columns: 1fr 20% 20%;
+    /* x */
+    column-gap: 1rem;
+}
+
+.grid_insert {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.grid_insert input[type="submit"] {
+    grid-column: -3/-1;
+}
+
+label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    label {
+        background-color: red;
+    }
+}
+
+
+@media (max-width: 700px) {
+    label {
+        background-color: blue;
+    }
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    /* y x */
+    padding: 10px 10px;
+    border: 0px;
+    border-bottom: 1px solid black;
+}
+
+button,
+input[type="submit"] {
+    background: black;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: background-color .2s linear;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+table {
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+    /* 100% es el porcentaje del contenedor, si contenedor tiene 900px eso va ser el 100% */
+    /* pero si tu pagina tiene 1888px eso seria el 100vw view x width */
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+table .button_delete {
+    background-color: red
+}
+
+table .button_delete:hover {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+table .button_edit {
+    background-color: darkorange
+}
+
+table .button_edit:hover {
+    background-color: white;
+    color: darkorange;
+    border: 1px solid darkorange;
+}
